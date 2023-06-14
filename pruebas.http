@@ -1,24 +1,35 @@
-//------crear
+//------------crear------------
+###
 POST http://localhost:9000/api/users
 Content-Type: application/json
 
 {
-    "nombre":"user2",
+    "nombre":"user",
+    "nombreUsers":"user123",
     "contraseña":"1234User2",
-    "correo":"user2@gmail.com"
+    "correo":"user2@gmail.com",
+    "rol":"6489ea3a1ed47f91a30b39f0"
 }
 
-//-----Mostrar user
+
+
+//------------Mostrar------------
 ###
 GET http://localhost:9000/api/users
 
-//------Buscar user
-###
-GET http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
 
-//------Actualizar user
+
+
+//------------Buscar------------
 ###
-PUT http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
+GET http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
 Content-Type: application/json
 
 {
@@ -27,6 +38,205 @@ Content-Type: application/json
     "correo":"user2@gmail.com"
 }
 
-//-------Eliminar user
+
+
+//------------Eliminar------------
 ###
-DELETE http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
+DELETE http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
+
+//_____________________Productos___________________________________________________________
+
+//------------crear------------
+###
+POST http://localhost:9000/api/productos
+Content-Type: application/json
+
+{
+    "nombre":"uvas",
+    "descripcion":"fresa frescas",
+    "imagen":"asffvjhidufg.png",
+    "precio":"23",
+    "sabor":"fresa",
+    "presentacion":"caja",
+    "existencia":"31"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:9000/api/productos
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:9000/api/productos/6489f3541ed47f91a30b39ff
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/productos/6489f3541ed47f91a30b39ff
+Content-Type: application/json
+
+{
+    "nombre":"uvas",
+    "descripcion":"fresa fresca",
+    "imagen":"asffvjhidufg.png",
+    "precio":"23",
+    "sabor":"fresa",
+    "presentacion":"caja",
+    "existencia":"31"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/productos/6489f3541ed47f91a30b39ff
+
+
+//_______________________________redesSociales____________________________________________________________
+
+//------------crear------------
+###
+POST http://localhost:9000/api/redesEmpresa
+Content-Type: application/json
+
+{
+    "tipo":"Whatsapp",
+    "enlace":"https://web.whatsapp.com"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:9000/api/redesEmpresa
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:9000/api/redesEmpresa/6489f7b81ed47f91a30b3a09
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/redesEmpresa/6489f7b81ed47f91a30b3a09
+Content-Type: application/json
+
+{
+    "tipo":"Whatsapp",
+    "enlace":"https://web.whatsapp.coms"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/redesEmpresa/6489f7b81ed47f91a30b3a09
+
+
+//__________________________________informacion de la empresa_______________________________________________________________
+
+//------------crear------------
+###
+POST http://localhost:9000/api/infEmpre
+Content-Type: application/json
+
+{
+    "nombre":"NombreEmpresa",
+    "informacion":"esta empresa de dedica a mostrar productos de venta",
+    "direccion":"col.ejemplo S/N",
+    "telefono":"1234567890",
+    "correo":"ejemplo2023@gmail.com",
+    "logo":"dfbashfguea.png"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:9000/api/infEmpre
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:9000/api/infEmpre/6489f8f81ed47f91a30b3a12
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/infEmpre/6489f8f81ed47f91a30b3a12
+Content-Type: application/json
+
+{
+    "nombre":"NombreEmpresas",
+    "informacion":"esta empresa de dedica a mostrar productos de venta",
+    "direccion":"col.ejemplo S/N",
+    "telefono":"1234567890",
+    "correo":"ejemplo2023@gmail.com",
+    "logo":"dfbashfguea.png"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/infEmpre/6489f8f81ed47f91a30b3a12
+
+
+//_________________________________________Roles de ususario___________________________________________________
+//------------crear------------
+###
+POST http://localhost:9000/api/rol
+Content-Type: application/json
+
+{
+    "rol":"user",
+    "descripcion":"Usuario"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:9000/api/rol
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:9000/api/rol/6489e9e61ed47f91a30b39e7
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/rol/6489e9e61ed47f91a30b39e7
+Content-Type: application/json
+
+{
+    "rol":"user",
+    "descripcion":"Usuario"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/rol/6489e9e61ed47f91a30b39e7
+

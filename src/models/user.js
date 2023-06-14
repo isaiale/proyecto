@@ -6,12 +6,21 @@ const UserSchema = new Schema({
         type:String,
         require:true
     },
+    nombreUsers:{
+        type:String,
+        require:true
+    },
     contraseña:{
         type:String,
         require:true
     },
     correo:{
         type:String,
+        require:true
+    },
+    rol:{
+        type: Schema.Types.ObjectId,
+        ref:"rols",// verificar que esten bien
         require:true
     }
 });

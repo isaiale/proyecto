@@ -19,6 +19,22 @@ router.get("/users",(req,res)=>{
   .catch((error)=> res.json({message:error}));
 });
 
+//consultar
+router.get('/users',(req,res)=>{
+  UsersSchema.aggregate([
+      {
+          $lookup:{
+              from:'rols',
+              localField:'rol',
+              foreignField:'_id',
+              as:'rol'
+          }
+      }
+  ])
+  .then((data)=>res.json(data))
+  .catch((error)=>res.json({message:error}));
+});
+
 //Obtener usuario por Id
 router.get("/users/:id", (req, res)=>{
   const {id} = req.params;
@@ -31,9 +47,9 @@ router.get("/users/:id", (req, res)=>{
 //Actualizar usuario
 router.put('/users/:id',(req,res)=>{
   const {id} = req.params;
-  const {nombre,contraseña,correo} = req.body;
+  const {nombre,nombreUsers,contraseña,correo} = req.body;
   UserSchema
-  .updateOne({_id:id},{$set:{nombre,contraseña,correo}})
+  .updateOne({_id:id},{$set:{nombre,nombreUsers,contraseña,correo}})
   .then((data)=>res.json(data))
   .catch((error)=> res.json({message:error}));
 });
