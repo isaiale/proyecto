@@ -1,0 +1,32 @@
+//------crear
+POST http://localhost:9000/api/users
+Content-Type: application/json
+
+{
+    "nombre":"user2",
+    "contraseña":"1234User2",
+    "correo":"user2@gmail.com"
+}
+
+//-----Mostrar user
+###
+GET http://localhost:9000/api/users
+
+//------Buscar user
+###
+GET http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
+
+//------Actualizar user
+###
+PUT http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
+Content-Type: application/json
+
+{
+    "nombre":"user222",
+    "contraseña":"1234User23",
+    "correo":"user2@gmail.com"
+}
+
+//-------Eliminar user
+###
+DELETE http://localhost:9000/api/users/64856934fbfd78fbf9e71f67
