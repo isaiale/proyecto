@@ -54,7 +54,7 @@ Content-Type: application/json
 {
     "nombre":"uvas",
     "descripcion":"fresa frescas",
-    "imagen":"asffvjhidufg.png",
+    "imagen":"asffvjhidufg",
     "precio":"23",
     "sabor":"fresa",
     "presentacion":"caja",
@@ -96,7 +96,7 @@ Content-Type: application/json
 
 //------------Eliminar------------
 ###
-DELETE http://localhost:9000/api/productos/6489f3541ed47f91a30b39ff
+DELETE http://localhost:9000/api/productos/6489f3491ed47f91a30b39fd
 
 
 //_______________________________redesSociales____________________________________________________________
@@ -148,7 +148,7 @@ DELETE http://localhost:9000/api/redesEmpresa/6489f7b81ed47f91a30b3a09
 
 //------------crear------------
 ###
-POST http://localhost:9000/api/infEmpre
+POST http://localhost:8000/api/infEmpre
 Content-Type: application/json
 
 {
@@ -164,7 +164,7 @@ Content-Type: application/json
 
 //------------Mostrar------------
 ###
-GET http://localhost:9000/api/infEmpre
+GET http://localhost:8000/api/infEmpre
 
 
 
@@ -239,4 +239,53 @@ Content-Type: application/json
 //------------Eliminar------------
 ###
 DELETE http://localhost:9000/api/rol/6489e9e61ed47f91a30b39e7
+
+
+
+
+
+//_________________________________________ Slider ___________________________________________________
+//------------crear------------
+###
+POST http://localhost:8000/api/slider
+Content-Type: application/json
+
+{
+    "titulo":"inicios",
+    "descripcion":"descripcion de productos",
+    "imagen":"adhbdfikewg"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:8000/api/slider
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:8000/api/slider/6490b20f7382740d8eb6ab41
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:8000/api/slider/6490b20f7382740d8eb6ab41
+Content-Type: application/json
+
+{
+    "titulo":"inicios",
+    "descripcion":"descripcion de productos 2",
+    "imagen":"adhbdfikewg"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/slider
 
