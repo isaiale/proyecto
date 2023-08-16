@@ -20,7 +20,7 @@ router.get('/rol',(req,res)=>{
 });
 
 //consulta id
-router.get('/rol/:id',(req,res)=>{/// aun no se como hacerle xd
+router.get('/rol/:id',(req,res)=>{
     const {id} = req.params;
     RolSchema
     .findById(id)

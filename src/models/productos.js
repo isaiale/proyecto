@@ -10,7 +10,7 @@ const ProdSchema = new Schema({
     type: String,
     require: true,
   },
-  imagen: {
+  categoria: {
     type: String,
     required: true
   },
@@ -18,19 +18,14 @@ const ProdSchema = new Schema({
     type: Number,
     require: true,
   },
-  sabor: {
-    type: String,
-    require: true,
-  },
-  presentacion: {
-    type: String,
-    require: true,
-  },
   existencia: {
     type: Number,
     require: true,
+  },
+  imagen: {
+    type: String,
+    required: true
   }
 });
-
 
 module.exports = mongoose.model('Productos',ProdSchema);

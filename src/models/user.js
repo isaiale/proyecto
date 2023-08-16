@@ -18,13 +18,19 @@ const UserSchema = new Schema({
         type: String,
         require: true
     },
-    rol: {
-        type: Schema.Types.ObjectId,
-        ref: "rols",// verificar que esten bien
+    pregunta: {
+        type: String,
         require: true
     },
-    //resetToken: String, // Campo para almacenar el token de reinicio de contraseña
-    //resetTokenExpiry: Date // Campo para almacenar la fecha de expiración del token de reinicio de contraseña
+    respuesta: {
+        type: String,
+        require: true
+    },
+    rol: {
+        type: Schema.Types.ObjectId,
+        ref: "rols",
+        require: true
+    }    
 });
 
 module.exports = mongoose.model('Usuarios', UserSchema);

@@ -31,9 +31,9 @@ router.get("/productos/:id", (req, res)=>{
 //Actualizar usuario
 router.put('/productos/:id',(req,res)=>{
   const {id} = req.params;
-  const {nombre,descripcion,imagen,precio,sabor,presentacion,existencia} = req.body;
+  const {nombre,descripcion,categoria,precio,existencia,imagen} = req.body;
   Producto
-  .updateOne({_id:id},{$set:{nombre,descripcion,imagen,precio,sabor,presentacion,existencia}})
+  .updateOne({_id:id},{$set:{nombre,descripcion,categoria,precio,existencia,imagen}})
   .then((data)=>res.json(data))
   .catch((error)=> res.json({message:error}));
 });

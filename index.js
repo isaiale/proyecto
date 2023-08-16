@@ -11,7 +11,7 @@ const InfEmpresaRoutes = require("./src/routes/infEmpresa");
 const SliderRoutes = require("./src/routes/slider")
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 9000;
 
 //interfaz de comunicacion 
 app.use(cors());
@@ -36,8 +36,8 @@ app.get("/", (req, res)=>{
 
 //conexion a mongodb
 mongoose
-.connect(process.env.MONGODB_URI)
-.then(() => console.log("conectado a mongo Atlas"))
+.connect(process.env.URI_MONGODB)
+.then(() => console.log("conectado a mongoDB Atlas"))
 .catch((error) => console.error(error))
 
 app.listen(port, ()=> console.log("puerto", port));

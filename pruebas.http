@@ -3,15 +3,14 @@
 POST http://localhost:9000/api/users
 Content-Type: application/json
 
-{
-    "nombre":"user",
-    "nombreUsers":"user123",
-    "contraseña":"1234User2",
-    "correo":"user2@gmail.com",
-    "rol":"6489ea3a1ed47f91a30b39f0"
+{      
+    "nombre": "isai",
+    "nombreUsers": "user2",
+    "contraseña": "1234User2",
+    "correo": "isai@gmail.comm",
+    "pregunta": "como se llama tu perro",
+    "respuesta": "suri"
 }
-
-
 
 //------------Mostrar------------
 ###
@@ -22,27 +21,31 @@ GET http://localhost:9000/api/users
 
 //------------Buscar------------
 ###
-GET http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
+GET http://localhost:9000/api/users/64dc509bd2ac045daa786946
 
 
 
 
 //------------Actualizar------------
 ###
-PUT http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
+PUT http://localhost:9000/api/users/64dc509bd2ac045daa786946
 Content-Type: application/json
 
 {
-    "nombre":"user222",
-    "contraseña":"1234User23",
-    "correo":"user2@gmail.com"
+    "nombre": "user",
+    "nombreUsers": "user",
+    "contraseña": "1234User",
+    "correo": "user2@gmail.com",
+    "pregunta": "como se llama tu perrooo",
+    "respuesta": "surisss",
+    "rol":"64dc4875a909109c337b700e"
 }
 
 
 
 //------------Eliminar------------
 ###
-DELETE http://localhost:9000/api/users/6485698ffbfd78fbf9e71f6a
+DELETE http://localhost:9000/api/users/64dc509bd2ac045daa786946
 
 //_____________________Productos___________________________________________________________
 
