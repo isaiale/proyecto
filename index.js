@@ -9,6 +9,7 @@ const RedesSocialesRoutes = require("./src/routes/redesSocialesEmpresa");
 const RolRoutes = require("./src/routes/rol");
 const InfEmpresaRoutes = require("./src/routes/infEmpresa");
 const SliderRoutes = require("./src/routes/slider")
+const Categoria = require("./src/routes/categoria")
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -28,6 +29,7 @@ app.use('/api',RedesSocialesRoutes);
 app.use('/api',RolRoutes);
 app.use('/api',InfEmpresaRoutes);
 app.use('/api',SliderRoutes);
+app.use("/api",Categoria);
 
 //routes
 app.get("/", (req, res)=>{

@@ -16,9 +16,6 @@ Content-Type: application/json
 ###
 GET http://localhost:9000/api/users
 
-
-
-
 //------------Buscar------------
 ###
 GET http://localhost:9000/api/users/64dc509bd2ac045daa786946
@@ -47,7 +44,7 @@ Content-Type: application/json
 ###
 DELETE http://localhost:9000/api/users/64dc509bd2ac045daa786946
 
-//_____________________Productos___________________________________________________________
+//_____________________ Productos ___________________________________________________________
 
 //------------crear------------
 ###
@@ -56,7 +53,7 @@ Content-Type: application/json
 
 {
     "nombre":"uvas",
-    "descripcion":"fresa frescas",
+    "descripcion":"64e7f89f05d3e52dbf9465d0",
     "imagen":"asffvjhidufg",
     "precio":"23",
     "sabor":"fresa",
@@ -99,10 +96,10 @@ Content-Type: application/json
 
 //------------Eliminar------------
 ###
-DELETE http://localhost:9000/api/productos/6489f3491ed47f91a30b39fd
+DELETE http://localhost:9000/api/productos/64e7f9b42a586cc9b4041708
 
 
-//_______________________________redesSociales____________________________________________________________
+//_______________________________ redesSociales ____________________________________________________________
 
 //------------crear------------
 ###
@@ -151,7 +148,7 @@ DELETE http://localhost:9000/api/redesEmpresa/6489f7b81ed47f91a30b3a09
 
 //------------crear------------
 ###
-POST http://localhost:8000/api/infEmpre
+POST http://localhost:9000/api/infEmpre
 Content-Type: application/json
 
 {
@@ -291,4 +288,45 @@ Content-Type: application/json
 //------------Eliminar------------
 ###
 DELETE http://localhost:9000/api/slider
+
+//_________________________________________ Categoria ___________________________________________________
+//------------crear------------
+###
+POST http://localhost:9000/api/categoria
+Content-Type: application/json
+
+{
+    "nombre":"Lacteos"
+}
+
+
+
+//------------Mostrar------------
+###
+GET http://localhost:9000/api/categoria
+
+
+
+
+//------------Buscar------------
+###
+GET http://localhost:9000/api/categoria/64e7f88e05d3e52dbf9465ce
+
+
+
+
+//------------Actualizar------------
+###
+PUT http://localhost:9000/api/categoria/64e7f88e05d3e52dbf9465ce
+Content-Type: application/json
+
+{
+    "nombre":"Jugos"
+}
+
+
+
+//------------Eliminar------------
+###
+DELETE http://localhost:9000/api/categoria/64e7f89f05d3e52dbf9465d0
 
